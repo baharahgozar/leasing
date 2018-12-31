@@ -1,0 +1,53 @@
+<form class="text-center border border-light p-5" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"
+    novalidate>
+    <p class="h4 mb-4"> نمایندگی جدید </p>
+    <div class="row">
+        <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder="کد نمایندگی " name="code"
+                [(ngModel)]="model.code" #code="ngModel" [ngClass]="{ 'is-invalid': f.submitted && code.invalid }"
+                required />
+            <div *ngIf="f.submitted && code.invalid" class="invalid-feedback">
+                <div *ngIf="code.errors.required">کد نمایندگی را وارد کنید</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder="آدرس نمایندگی" name="address"
+                [(ngModel)]="model.address" #address="ngModel" [ngClass]="{ 'is-invalid': f.submitted && address.invalid }"
+                required />
+            <div *ngIf="f.submitted && address.invalid" class="invalid-feedback">
+                <div *ngIf="address.errors.required">آدرس نمایندگی را وارد کنید</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <input autocomplete="off" type="text" class="form-control mb-4" placeholder="نام کارگزار " name="brokerName"
+              [(ngModel)]="model.brokerName" #brokerName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && brokerName.invalid }"
+              required />
+          <div *ngIf="f.submitted && brokerName.invalid" class="invalid-feedback">
+              <div *ngIf="brokerName.errors.required"> نام کارگزار را وارد کنید</div>
+          </div>
+      </div>
+        <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder=" تلفن نمایندگی" name="tel"
+                [(ngModel)]="model.tel" #tel="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tel.invalid }"
+                required />
+            <div *ngIf="f.submitted && tel.invalid" class="invalid-feedback">
+                <div *ngIf="tel.errors.required"> تلفن نمایندگی را وارد کنید</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <input autocomplete="off" type="text" class="form-control mb-4" placeholder="  نام مسئول " name="responsibleName"
+              [(ngModel)]="model.responsibleName" #responsibleName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && responsibleName.invalid }"
+              required />
+          <div *ngIf="f.submitted && responsibleName.invalid" class="invalid-feedback">
+              <div *ngIf="responsibleName.errors.required">   نام مسئول را وارد کنید</div>
+          </div>
+      </div>
+
+        <select class="browser-default custom-select mb-4" name="provinceID" [(ngModel)]="model.provinceID">
+          <option value="" disabled> انتخاب شهر</option>
+          <option *ngFor="let item of provinces" value={{item.id}} selected>{{item.provinceName}} </option>
+      </select>
+
+        <button class="btn btn-info btn-block" type="submit">ذخیره </button>
+    </div>
+</form>

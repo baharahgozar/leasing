@@ -1,0 +1,23 @@
+<form class="text-center border border-light p-5" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"
+    novalidate>
+    <p class="h4 mb-4"> استان جدید </p>
+    <div class="row">
+            <div class="col-md-6">
+                    <input autocomplete="off" type="text" class="form-control mb-4" placeholder="نام استان" name="provinceName"
+                        [(ngModel)]="model.provinceName" #provinceName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && provinceName.invalid }"
+                        required />
+                    <div *ngIf="f.submitted && provinceName.invalid" class="invalid-feedback">
+                        <div *ngIf="provinceName.errors.required">نام استان را وارد کنید</div>
+                    </div>
+                </div>
+        <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder=" کد استان" name="provinceCode"
+                [(ngModel)]="model.provinceCode" #provinceCode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && provinceCode.invalid }"
+                required />
+            <div *ngIf="f.submitted && provinceCode.invalid" class="invalid-feedback">
+                <div *ngIf="provinceCode.errors.required">کد استان را وارد کنید</div>
+            </div>
+        </div>
+        <button class="btn btn-info btn-block" type="submit">ذخیره </button>
+    </div>
+</form>

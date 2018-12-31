@@ -1,0 +1,58 @@
+<section class="mt-5">
+  <div class="card card-cascade narrower z-depth-1">
+    <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+      <a [hidden]="editMode" class="white-text mx-3">افزودن آیتم جدید</a>
+      <a [hidden]="!editMode" class="white-text mx-3">ویرایش اطلاعات
+        :
+        {{model.cityName}}
+      </a>
+      <div>
+        <a routerLink="/city" class="btn btn-mdb-color btn-sm px-2 waves-effect waves-light">
+          لیست شهر ها
+        </a>
+      </div>
+    </div>
+    <div class="px-4 mb-4">
+      <form class="text-center border border-light p-5" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"
+        novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder="نام شهر" name="cityName"
+              [(ngModel)]="model.cityName" #cityName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cityName.invalid }"
+              required />
+            <div *ngIf="f.submitted && cityName.invalid" class="invalid-feedback">
+              <div *ngIf="cityName.errors.required">نام شهر را وارد کنید</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder="کد شهر" name="cityCode"
+              [(ngModel)]="model.cityCode" #cityCode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cityCode.invalid }"
+              required />
+            <div *ngIf="f.submitted && cityCode.invalid" class="invalid-feedback">
+              <div *ngIf="cityCode.errors.required">کد شهر را وارد کنید</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <select class="browser-default custom-select mb-4" name="provinceId" [(ngModel)]="model.provinceID">
+              <option value="" disabled>انتخاب استان</option>
+              <option *ngFor="let item of provinces" value={{item.id}} selected>{{item.provinceName}}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder="کد تلفن شهر" name="telCode"
+              [(ngModel)]="model.telCode" #telCode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && telCode.invalid }"
+              required />
+            <div *ngIf="f.submitted && telCode.invalid" class="invalid-feedback">
+              <div *ngIf="telCode.errors.required">کد تلفن شهر را وارد کنید</div>
+            </div>
+          </div>
+        </div>
+        <!-- Send button -->
+        <button class="btn btn-info btn-block" type="submit">ذخیره</button>
+
+      </form>
+    </div>
+  </div>
+</section>

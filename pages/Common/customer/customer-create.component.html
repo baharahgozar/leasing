@@ -1,0 +1,488 @@
+<section class="mt-5">
+        <div class="form-group row">
+                <div class="col-sm-2">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="rdbPerson" name="rdbPersonType" mdbinputdirective>
+                            <label class="custom-control-label" for="rdbPerson">حقیقی</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="rdbLegal" name="rdbPersonType" mdbinputdirective>
+                            <label class="custom-control-label" for="rdbLegal">حقوقی</label>
+                        </div>
+                    </div>  
+        </div>
+
+        <div class="card card-cascade narrower z-depth-1 mb-2">
+            <div class="view view-cascade gradient-card-header card-header header-color white-text narrower py-2 mx-0 mb-3 d-flex justify-content-between align-items-center">
+                <a routerlink="/province" class="white-text mx-3">مشخصات فردی</a>
+            </div>
+            <div class="px-4 mb-4">
+                <div class="form-group row">    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نام:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="نام">
+                    </div>
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نام خانوادگی:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="نام خانوادگی">
+                    </div>
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نام پدر:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="نام پدر">
+                    </div>         
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">کد ملی:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="کد ملی ">
+                    </div>   
+                </div>
+    
+                <div class="form-group row">
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">شماره شناسنامه:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="شماره شناسنامه">
+                    </div>
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">شماره سریال:</label>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            <select class="col-sm-6 browser-default custom-select">
+                                <option value="" disabled selected>حرف</option>
+                                <option value="1">الف</option>
+                                <option value="2">ب</option>
+                                <option value="3">ج</option>
+                            </select>
+                            <input mdbInputDirective type="text" class="form-control mr-2 col-sm-6" id="inputEmail3MD" placeholder="شماره ">
+                        </div>
+                    </div>  
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">تاریخ تولد:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="..../..../.........">
+                    </div>
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">محل صدور:</label>
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select">
+                            <option value="" disabled selected>محل صدور</option>
+                            <option value="1">تهران</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">تاریخ صدور:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="..../..../.........">
+                    </div>
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">جنسیت:</label>
+                    <div class="col-sm-2 mb-auto py-6">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample" mdbinputdirective>
+                            <label class="custom-control-label" for="defaultInline1">زن</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample" mdbinputdirective>
+                            <label class="custom-control-label" for="defaultInline2">مرد</label>
+                        </div>
+                    </div>
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">وضعیت تأهل:</label>
+                    <div class="col-sm-2">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample" mdbinputdirective>
+                            <label class="custom-control-label" for="defaultInline1">مجرد</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample" mdbinputdirective>
+                            <label class="custom-control-label" for="defaultInline2">متأهل</label>
+                        </div>
+                    </div>                            
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">ایمیل:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="ایمیل">
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">تحصیلات:</label>
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select">
+                            <option value="" disabled selected> تحصیلات</option>
+                            <option value="1">دیپلم</option>
+                        </select>
+                    </div>
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">کد بورسی:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="کد بورسی">
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    <mdb-checkbox [checked]="true" [default]="true" class="col-sm-1 text-left my-0"  ></mdb-checkbox> 
+                    <label for="inputEmail3MD" class="col-sm-2 col-form-label">عضو تعاونی خاص</label>                    
+                </div>
+    
+                <button (click)="toggle()" id="bt">
+                    {{buttonName}}
+                </button>
+    
+                <ng-container *ngIf="show">
+                    <div class="form-group row">
+                        <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نام محل کار:</label>
+                        <div class="col-sm-2">
+                            <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="نام محل کار">
+                        </div>
+                        <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">شماره پرسنلی:</label>
+                        <div class="col-sm-2">
+                            <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="شماره پرسنلی">
+                        </div>
+                        <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">کد سهامداری:</label>
+                        <div class="col-sm-2">
+                            <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="کد سهامداری">
+                        </div>                                
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+
+        <!-- Legal -->
+        <div class="card card-cascade narrower z-depth-1 mb-2">
+                <div class="view view-cascade gradient-card-header card-header header-color white-text narrower py-2 mx-0 mb-3 d-flex justify-content-between align-items-center">
+                    <a routerlink="/province" class="white-text mx-3">مشخصات شرکت</a>
+                </div>
+                <div class="px-4 mb-4">
+                    <div class="form-group row">    
+                        <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نام شرکت:</label>
+                        <div class="col-sm-2">
+                            <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="نام شرکت">
+                        </div>
+        
+                        <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نوع شرکت:</label>
+                        <div class="col-sm-2">                           
+                            <select class="browser-default custom-select">
+                                    <option value="" disabled selected>نوع شرکت</option>
+                                    <option value="1">الف</option>
+                            </select>
+                        </div>
+        
+                        <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نوع فعالیت شرکت:</label>
+                        <div class="col-sm-2">
+                                <select class="browser-default custom-select">
+                                        <option value="" disabled selected>نوع فعالیت شرکت</option>
+                                        <option value="1">الف</option>
+                                </select>
+                        </div>         
+        
+                        <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">شماره ثبت شرکت:</label>
+                        <div class="col-sm-2">
+                            <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="شماره ثبت شرکت ">
+                        </div>   
+                    </div>
+
+                    <div class="form-group row">    
+                            <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label"> تاریخ ثبت شرکت:</label>
+                            <div class="col-sm-2">
+                                <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="..../..../.........">
+                            </div>
+            
+                            <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">محل ثبت شرکت:</label>
+                            <div class="col-sm-2">                           
+                                    <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="محل ثبت شرکت ">
+                            </div>
+            
+                            <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">شناسه ملی:</label>
+                            <div class="col-sm-2">
+                                    <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="شناسه ملی ">
+                            </div>         
+            
+                            <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">کد اقتصادی:</label>
+                            <div class="col-sm-2">
+                                <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder=" کد اقتصادی  ">
+                            </div>   
+                        </div>
+
+
+                    </div>
+                    </div>
+
+
+        <!-- Address -->
+        <div class="card card-cascade narrower z-depth-1 mb-2">
+            <div class="view view-cascade gradient-card-header card-header header-color white-text narrower py-2 mx-0 mb-3 d-flex justify-content-between align-items-center">
+                <a routerlink="/province" class="white-text mx-3">مشخصات نشانی</a>
+            </div>
+            <div class="px-4 mb-4">
+                <div class="row pr-2">
+                    <button type="button" (click)="addressModal.show()" class="btn btn-mdb-color btn-sm px-2 waves-effect waves-light">
+                        <i class="fa fa-plus mt-0 ml-1"></i>افزودن آیتم جدید</button>
+                </div>
+    
+                <div class="px-0 mb-0">
+                    <div class="table-responsive">
+                        <ag-grid-angular style="height:50px" class="ag-theme-balham" [enableRtl]="true" [rowSelection]="true"
+                                         [enableSorting]="true" [enableFilter]="true" [rowData]="rowData" [columnDefs]="columnDefs"
+                                         (rowDoubleClicked)="dataModal.show()">
+                        </ag-grid-angular>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- Phone -->
+        <div class="card card-cascade narrower z-depth-1 mb-2">
+            <div class="view view-cascade gradient-card-header card-header header-color white-text narrower py-2 mx-0 mb-3 d-flex justify-content-between align-items-center">
+                <a routerlink="/province" class="white-text mx-3">مشخصات تماس</a>
+            </div>
+            <div class="px-4 mb-4">
+                <div class="row pr-2">
+                    <button type="button" (click)="phoneModal.show()" class="btn btn-mdb-color btn-sm px-2 waves-effect waves-light">
+                        <i class="fa fa-plus mt-0 ml-1"></i>افزودن آیتم جدید</button>
+    
+                </div>
+    
+                <div class="px-0 mb-0">
+                    <div class="table-responsive">
+                        <ag-grid-angular style="height:50px" class="ag-theme-balham" [enableRtl]="true" [rowSelection]="true"
+                                         [enableSorting]="true" [enableFilter]="true" [rowData]="rowData" [columnDefs]="columnDefsPhone"
+                                         (rowDoubleClicked)="dataModal.show()">
+                        </ag-grid-angular>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    
+        <!-- Job -->
+        <div class="card card-cascade narrower z-depth-1 mb-2">
+            <div class="view view-cascade gradient-card-header card-header header-color white-text narrower py-2 mx-0 mb-3 d-flex justify-content-between align-items-center">
+                <a routerlink="/province" class="white-text mx-3">مشخصات شغل</a>
+            </div>
+            <div class="px-4 mb-4">
+                <div class="form-group row">    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نوع شغل:</label>
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select">
+                            <option value="" disabled selected>نوع شغل</option>
+                            <option value="1">الف</option>
+                        </select>
+                    </div>
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نوع استخدام:</label>
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select">
+                            <option value="" disabled selected>نوع استخدام</option>
+                            <option value="1">الف</option>
+                        </select>
+                    </div>      
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">تاریخ شروع فعالیت:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="..../..../.........">
+                    </div>
+    
+    
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">سمت:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="سمت">
+                    </div>
+                </div>
+    
+                <div class="form-group row">  
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">درآمد ماهیانه:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="درآمد ماهیانه">
+                    </div>
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">نوع فعالیت:</label>
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select">
+                            <option value="" disabled selected>نوع فعالیت</option>
+                            <option value="1">الف</option>
+                        </select>
+                    </div>  
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">وضعیت محل کسب: </label>
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select">
+                            <option value="" disabled selected>وضعیت محل کسب</option>
+                            <option value="1">الف</option>
+                        </select>
+                    </div>   
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">تاریخ انقضای مجوز:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="..../..../.........">
+                    </div>                                                               
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail3MD" class="col-sm-1 px-0 text-left col-form-label">اجاره ماهیانه:</label>
+                    <div class="col-sm-2">
+                        <input mdbInputDirective type="text" class="form-control" id="inputEmail3MD" placeholder="اجاره ماهیانه">
+                    </div>  
+                </div>
+    
+            </div>
+        </div>        
+    </section>
+    
+    <!-- DataModal For Address -->
+    <div mdbModal #addressModal="mdb-modal" class="modal fade" id="addressModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true" [config]="{backdrop: true, ignoreBackdropClick: false}">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100" id="myModalLabel">افزودن آدرس جدید</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="addressModal.hide()">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">  
+    
+                    <div class="form-group row">
+                        <label for="inputEmail3MD" class="col-sm-2 mx-0 text-left col-form-label" >نوع آدرس:</label>
+                        <div class="col-sm-4">
+                            <select class="browser-default custom-select">
+                                <option value="" disabled selected>حرف</option>
+                                <option value="1">الف</option>
+                            </select>
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label"> استان:</label>
+                        <div class="col-sm-4">
+                            <select class="browser-default custom-select">
+                                <option value="" disabled selected>حرف</option>
+                                <option value="1">الف</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputEmail3MD" class="col-sm-2 px-0 text-left col-form-label">شهر:</label>
+                        <div class="col-sm-4">
+                            <select class="browser-default custom-select">
+                                <option value="" disabled selected>حرف</option>
+                                <option value="1">الف</option>
+                            </select>
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">خیابان اصلی:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="خیابان اصلی">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">خیابان فرعی:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="خیابان فرعی">
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">کوچه:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="خیابان اصلی">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">پلاک:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="خیابان فرعی">
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">طبقه:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="خیابان اصلی">
+                        </div>
+                    </div>     
+                    <div class="form-group row">
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">واحد:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="خیابان فرعی">
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label"> منطقه:</label>
+                        <div class="col-sm-4">
+                            <select class="browser-default custom-select">
+                                <option value="" disabled selected>منطقه</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                    </div>     
+                    <div class="form-group row">
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">کد پستی:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="خیابان فرعی">
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label"> وضعیت ملکی:</label>
+                        <div class="col-sm-4">
+                            <select class="browser-default custom-select">
+                                <option value="" disabled selected>منطقه</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                    </div>   
+                    <div class="form-group row">
+                        <mdb-checkbox [checked]="true" [default]="true" class="col-sm-2 text-left my-0"  ></mdb-checkbox> 
+                        <label for="inputEmail3MD" class="col-sm-4 col-form-label">پیش فرض</label>                    
+                    </div>                                                                 
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="dataModal.hide()"
+                            mdbWavesEffect>بستن پنجره</button>
+                    <button type="button" class="btn btn-primary btn-sm waves-light" (click)="editRow()" mdbWavesEffect>ذخیره</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- DataModal For Phone -->
+    <div mdbModal #phoneModal="mdb-modal" class="modal fade" id="PhoneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true" [config]="{backdrop: true, ignoreBackdropClick: false}">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100" id="myModalLabel">افزودن تلفن جدید</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="phoneModal.hide()">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">  
+    
+                    <div class="form-group row">
+                        <!-- Material input -->
+                        <label for="inputEmail3MD" class="col-sm-2 mx-0 text-left col-form-label" >نوع تلفن:</label>
+                        <div class="col-sm-4">
+                            <select class="browser-default custom-select">
+                                <option value="" disabled selected>نوع تلفن</option>
+                                <option value="1">الف</option>
+                            </select>
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label"> نسبت:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="نسبت">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label"> پیش شماره تلفن:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="پیش شماره">
+                        </div>
+    
+                        <label for="inputPass3MD" class="col-sm-2 px-0 text-left col-form-label">شماره تلفن:</label>
+                        <div class="col-sm-4">
+                            <input mdbInputDirective type="email" class="form-control" id="inputEmail3MD" placeholder="شماره تلفن">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <mdb-checkbox [checked]="true" [default]="true" class="col-sm-2 text-left my-0"  ></mdb-checkbox> 
+                        <label for="inputEmail3MD" class="col-sm-4 col-form-label">  پیش فرض</label>                    
+                    </div>                                                                 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="dataModal.hide()"
+                            mdbWavesEffect>بستن پنجره</button>
+                    <button type="button" class="btn btn-primary btn-sm waves-light" (click)="editRow()" mdbWavesEffect>ذخیره</button>
+                </div>
+            </div>
+        </div>
+    </div>

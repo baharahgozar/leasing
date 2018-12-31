@@ -1,0 +1,137 @@
+<!--Main Navigation-->
+<header>
+    <!-- SideNav slide-out button -->
+    <!-- Sidebar -->
+    <div id="slide-out" [ngClass]="showMenu ? 'fadeInRight' : 'fadeOutRight'" class="sidebar-fixed position-fixed sn-bg-1 animated ">
+        <div class="mask flex-center2 rgb-navy-strong">
+
+            <a routerLink="/" class="logo-wrapper waves-effect">
+                <img src="../../../assets/images/logo/main-logo.png" class="img-fluid" alt="">
+                <h4>سامانه جامع لیزینگ</h4>
+                <p class="text-center">(لیزینگ ایرانیان)</p>
+                
+            </a>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto main-menu">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="base.toggle()">
+                        <i class="fa fa-angle-left"></i>
+                        <span class="clearfix d-none d-sm-inline-block">اطلاعات پایه</span>
+                    </a>
+                    <ul class="nav navbar-nav nav-flex-icons ml-auto" mdbCollapse #base="bs-collapse">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/province" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">استان</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/city" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">شهر</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/color" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">رنگ</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/car" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">خودرو</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/carAccessory" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">لوازم جانبی خودرو</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/garnerLocation" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">انبارها و پارکینگ ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/map" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block"> نگاشت</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/document" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block"> مدارک</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="sale.toggle()">
+                        <i class="fa fa-angle-left"></i>
+                        <span class="clearfix d-none d-sm-inline-block">فروش</span>
+                    </a>
+                    <ul class="nav navbar-nav nav-flex-icons ml-auto" mdbCollapse #sale="bs-collapse">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/province" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">استان</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/city" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">شهر</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/color" routerLinkActive="menu-active">
+                                <i class="fa fa-circle-o"></i>
+                                <span class="clearfix d-none d-sm-inline-block">رنگ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar -->
+
+    <!--Navbar-->
+    <mdb-navbar [containerInside]="false" [ngClass]="{'pr-0': !showMenu}" SideClass="navbar navbar-expand-lg navbar-light pt-1 pb-1">
+        <!-- Navbar brand -->
+        <logo class="ml-3">
+            <a (click)="changeMainMenuState()" class="text-white p-1 m-1 button-collapse"><i class="fa fa-bars"></i></a>
+            <a class="navbar-brand text-white">
+                <strong>محسن درم بخت</strong>
+            </a>
+        </logo>
+        <!-- Collapsible content -->
+        <links>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" mdbWavesEffect>
+                        <i class="fa fa-user"></i>
+                        پروفایل کاربری</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" mdbWavesEffect (click)="logOut()">
+                        <i class="fa fa-power-off"></i>
+                        خروج</a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </links>
+        <!-- Collapsible content -->
+
+    </mdb-navbar>
+    <!--/.Navbar-->
+
+
+
+</header>
+<!--Main Navigation-->

@@ -1,0 +1,24 @@
+<section class="mt-5">
+    <div class="card card-cascade narrower z-depth-1">
+        <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+            <a routerLink="/province" class="white-text mx-3">لیست شهر ها</a>
+            <div>
+                <a routerLink="/city/create" class="btn btn-mdb-color btn-sm px-2 waves-effect waves-light">افزودن
+                    آیتم جدید</a>
+                <button type="button" (click)="removeItem()" class="btn btn-danger btn-sm px-2 waves-effect waves-light"><i
+                        class="fa fa-trash mt-0"></i>
+                    حذف آیتم</button>
+            </div>
+        </div>
+        <div class="px-4 mb-4">
+            <div class="table-responsive">
+                <ag-grid-angular style="width: 100%;height:500px" class="ag-theme-balham" [rowData]="rowData"
+                    [columnDefs]="columnDefs" (cellContextMenu)="onCellContextMenu($event)" (rowDoubleClicked)="onRowDoubleClicked($event)"
+                    (selectionChanged)="onSelectionChanged($event)" enableRtl rowSelection enableColResize
+                    enableSorting enableFilter groupHeaders suppressRowClickSelection toolPanelSuppressGroups
+                    toolPanelSuppressValues rowHeight="40">
+                </ag-grid-angular>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+<form class="text-center border border-light p-5" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"
+    novalidate>
+    <p class="h4 mb-4"> انبار جدید </p>
+    <div class="row">
+        <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder="نام انبار" name="garnerName"
+                [(ngModel)]="model.garnerName" #garnerName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && garnerName.invalid }"
+                required />
+            <div *ngIf="f.submitted && garnerName.invalid" class="invalid-feedback">
+                <div *ngIf="garnerName.errors.required">نام انبار را وارد کنید</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder="آدرس انبار" name="garnerAddress"
+                [(ngModel)]="model.garnerAddress" #garnerAddress="ngModel" [ngClass]="{ 'is-invalid': f.submitted && garnerAddress.invalid }"
+                required />
+            <div *ngIf="f.submitted && garnerAddress.invalid" class="invalid-feedback">
+                <div *ngIf="garnerAddress.errors.required">آدرس انبار را وارد کنید</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <input autocomplete="off" type="text" class="form-control mb-4" placeholder="نام کارگزار " name="brokerName"
+              [(ngModel)]="model.brokerName" #brokerName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && brokerName.invalid }"
+              required />
+          <div *ngIf="f.submitted && brokerName.invalid" class="invalid-feedback">
+              <div *ngIf="brokerName.errors.required"> نام کارگزار را وارد کنید</div>
+          </div>
+      </div>
+        <div class="col-md-6">
+            <input autocomplete="off" type="text" class="form-control mb-4" placeholder=" تلفن انبار" name="garnerTel"
+                [(ngModel)]="model.garnerTel" #garnerTel="ngModel" [ngClass]="{ 'is-invalid': f.submitted && garnerTel.invalid }"
+                required />
+            <div *ngIf="f.submitted && garnerTel.invalid" class="invalid-feedback">
+                <div *ngIf="garnerTel.errors.required">کد تلفن انبار را وارد کنید</div>
+            </div>
+        </div>
+        <select class="browser-default custom-select mb-4" name="provinceID" [(ngModel)]="model.provinceID">
+          <option value="" disabled> انتخاب استان</option>
+          <option *ngFor="let item of provinces" value={{item.id}} selected>{{item.provinceName}} </option>
+      </select>
+
+        <button class="btn btn-info btn-block" type="submit">ذخیره </button>
+    </div>
+</form>

@@ -1,0 +1,45 @@
+<div class="login-page">
+  <div class="login-container">
+    <div class="login-form">
+      <div class="text-center">
+        <img src="../../../../assets/images/logo/main-logo.png" width="130" />
+      </div>
+      <h1 class="text-center">سامانه جامع لیزینگ ایرانیان</h1>
+      <div class="text-center">
+        <p class="version">نسخه آزمایشی</p>
+      </div>
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-row">
+          <input type="text" autocomplete="off" class="form-item" placeholder="نام کاربری" name="userName" [(ngModel)]="model.userName"
+            #userName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userName.invalid }" required />
+          <div *ngIf="f.submitted && userName.invalid" class="invalid-feedback">
+            <div *ngIf="userName.errors.required">نام کاربری را وارد کنید</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <input type="password" class="form-item" placeholder="رمز عبور" name="password" [(ngModel)]="model.password"
+            #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="3" maxlength="10"/>
+          <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+            <div *ngIf="password.errors.required">رمز عبور را وارد کنید</div>
+            <div *ngIf="password.errors.minlength">رمز عبور باید حداقل 3 کاراکتر باشد</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <button type="submit" class="btn btn-primary">ورود به سامانه</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="login-footer">
+    <div>
+      <ul>
+        <li><a href="#">راهنمای سامانه</a></li>
+        <li><a href="#">سوالات متداول</a></li>
+        <li><a href="#">دفترچه تلفن</a></li>
+      </ul>
+    </div>
+    <div class="text-left">
+      <p class="copy-right">همه حقوق سامانه متعلق به شرکت لیزینگ ایرانیان می باشد</p>
+    </div>
+  </div>
+</div>
